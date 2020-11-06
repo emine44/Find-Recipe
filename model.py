@@ -27,10 +27,10 @@ class Cuisine(db.Model):
 
     cuisine_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     cuisine_country = db.Column(db.String)
-    dish_id = db.Column(db.Integer)
+    dish_id = db.Column(db.Integer,db.ForeignKey('dishes.dish_id'))
 
     def __repr__(self):
-        return f'<Cuisine cuisine_id={self.movie_id} cuisine_country={self.cuisine_country}>'  
+        return f'<Cuisine cuisine_id={self.cuisine_id} cuisine_country={self.cuisine_country}>'  
 
 class Dish(db.Model):
     """A movie."""
@@ -38,17 +38,19 @@ class Dish(db.Model):
     __tablename__ = 'dishes'
 
     dish_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    cuisine_id = db.Column(db.String)
+    cuisine_id = db.Column(db.Integer,db.ForeignKey('cuisines.cuisine_id'))
     name = db.Column(db.String)
     recipe = db.Column(db.Text)
     name = db.Column(db.String)
     ingredients = db.Column(db.Text)
     image=db.Column(db.String)
-    rating_id=db.Column(db.Integer)
+    rating_id=db.Column(db.Integer,db.ForeignKey('ratings.rating_id'))
     
+    cuisine= db.relationship('Cuisine', backref='dishes')
+    rating= db.relationship('Rating', backref='dishes')
 
     def __repr__(self):
-        return f'<Cuisine cuisine_id={self.movie_id} cuisine_country={self.cuisine_country}>'  
+        return f'<Dish dish_id={self.dish_id} name={self.name}>'  
 
 class Rating(db.Model):
     """A movie rating."""
@@ -57,13 +59,16 @@ class Rating(db.Model):
 
     rating_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     score = db.Column(db.Integer)
-    dish_id = db.Column(db.Integer, db.ForeignKey('movies.movie_id'))
+    dish_id = db.Column(db.Integer, db.ForeignKey('dishes.dish_id'))
     user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'))
+
+    user = db.relationship('User', backref='ratings')
+    dish=db.relationship('Dish',backref='ratings')
 
     def __repr__(self):
         return f'<Rating rating_id={self.rating_id} score={self.score}>'  
 
-def connect_to_db(flask_app, db_uri='postgresql:///ratings', echo=True):
+def connect_to_db(flask_app, db_uri='postgresql:///recipes', echo=True):
     flask_app.config['SQLALCHEMY_DATABASE_URI'] = db_uri
     flask_app.config['SQLALCHEMY_ECHO'] = True
     flask_app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False

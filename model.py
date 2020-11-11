@@ -1,6 +1,7 @@
 """Models for movie ratings app."""
 from datetime import datetime
 from flask_sqlalchemy import SQLAlchemy
+
 db = SQLAlchemy()
 
 
@@ -27,7 +28,7 @@ class Cuisine(db.Model):
 
     cuisine_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     cuisine_country = db.Column(db.String)
-    dish_id = db.Column(db.Integer,db.ForeignKey('dishes.dish_id'))
+    # dish_id = db.Column(db.Integer,db.ForeignKey('dishes.dish_id'))
 
     def __repr__(self):
         return f'<Cuisine cuisine_id={self.cuisine_id} cuisine_country={self.cuisine_country}>'  
@@ -38,13 +39,12 @@ class Dish(db.Model):
     __tablename__ = 'dishes'
 
     dish_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    cuisine_id = db.Column(db.Integer,db.ForeignKey('cuisines.cuisine_id'))
+    cuisine_id = db.Column(db.Integer,db.ForeignKey('cuisines.cuisine_id'), nullable=False)
     name = db.Column(db.String)
     recipe = db.Column(db.Text)
-    name = db.Column(db.String)
     ingredients = db.Column(db.Text)
     image=db.Column(db.String)
-    rating_id=db.Column(db.Integer,db.ForeignKey('ratings.rating_id'))
+    # rating_id=db.Column(db.Integer,db.ForeignKey('ratings.rating_id'),nullable=False)
     
     cuisine= db.relationship('Cuisine', backref='dishes')
     rating= db.relationship('Rating', backref='dishes')
@@ -59,8 +59,8 @@ class Rating(db.Model):
 
     rating_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     score = db.Column(db.Integer)
-    dish_id = db.Column(db.Integer, db.ForeignKey('dishes.dish_id'))
-    user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'))
+    dish_id = db.Column(db.Integer, db.ForeignKey('dishes.dish_id'),nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'), nullable=False)
 
     user = db.relationship('User', backref='ratings')
     dish=db.relationship('Dish',backref='ratings')

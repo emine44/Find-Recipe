@@ -3,15 +3,24 @@
 from model import db, User, Cuisine, Rating,Dish, connect_to_db
 
 
-def create_user(email, password):
+def create_user(user_name,email, password):
     """Create and return a new user."""
 
-    user = User(email=email, password=password)
+    user = User(user_name=user_name,email=email, password=password)
 
     db.session.add(user)
     db.session.commit()
 
     return user
+def create_cuisine(cuisine_country):
+    """Create and return a new user."""
+
+    cuisine = Cuisine(cuisine_country=cuisine_country)
+
+    db.session.add(cuisine)
+    db.session.commit()
+
+    return cuisine
 
 
 def get_users():

@@ -1,17 +1,12 @@
 """Server for movie ratings app."""
 
-from flask import Flask
-from flask import (Flask, render_template, request, flash, session,
-                   redirect)
-from model import connect_to_db
-import crud
+from flask import Flask, request
+from flask import render_template
 from jinja2 import StrictUndefined
-
-
 
 app = Flask(__name__)
 app.secret_key = "dev"
-# app.jinja_env.undefined = StrictUndefined
+app.jinja_env.undefined = StrictUndefined
 
 #routes and view functions!
 @app.route('/')
@@ -20,10 +15,19 @@ def homepage():
 
     return render_template('homepage.html')
 
-# @app.route('/cuisine_list')
-# def all_cuisines():
-#     """View all cuisines."""
-#     return render_template('cuisine_list.html')
+@app.route('/cuisine_list', methods=['POST'])
+def all_cuisines():
+    """View all cuisines."""
+    items=["African","German","Mexican","Korean","Indian"]
+    name= request.form.get("email")
+
+    return render_template('cuisine_list.html',items=items,name=name)
+
+@app.route('/sign_up')
+def signUp():
+
+    return render_template('sign_up.html')
+
 
 # @app.route('/user_profile')
 # def all_users():

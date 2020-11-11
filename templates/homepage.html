@@ -1,37 +1,31 @@
 {% extends 'base.html' %}
-{% block title %}Welcome{% endblock %}
+{% block title %}Welcomes{% endblock %}
 
 {% block body %}
   
-  <!-- <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-              </form> -->
-              <form>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1">
-                </div>
-                <div class="form-group form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </form>
-            </div>
-          </nav>
+<form class="form-inline my-2 my-lg-0" action="/cuisine_list" method="POST">
+  <div class="form-group mb-2">
+    <label for="staticEmail2" class="sr-only">Email</label>
+    <input type="email" name="email" class="form-control" id="inputPassword2" placeholder="Email">
+  </div>
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="inputPassword2" class="sr-only">Password</label>
+    <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+  </div>
+  <button type="submit" class="btn btn-outline-success my-2 my-sm-0">Login</button>
+</form>
+
+
+
+</nav>
+
 <div class="container">
   <div class="jumbotron">
       <h1 class="display-4">Welcome to Find Me Recipe!!</h1>
-      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+      <p class="lead">Our website will help you to find different recipes from different cuisines!!.</p>
       <hr class="my-4">
-      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+      <p>Site is under construction.</p>
+      <a class="btn btn-primary btn-lg" href="/sign_up" id="signUp" role="button">Sign Up</a>
     </div>
   </div>
 

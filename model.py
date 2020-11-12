@@ -37,13 +37,11 @@ class Dish(db.Model):
     """A movie."""
 
     __tablename__ = 'dishes'
-
-    dish_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     cuisine_id = db.Column(db.Integer,db.ForeignKey('cuisines.cuisine_id'), nullable=False)
+    dish_id = db.Column(db.Integer,  primary_key=True)
     name = db.Column(db.String)
-    recipe = db.Column(db.Text)
-    ingredients = db.Column(db.Text)
     image=db.Column(db.String)
+
     # rating_id=db.Column(db.Integer,db.ForeignKey('ratings.rating_id'),nullable=False)
     
     cuisine= db.relationship('Cuisine', backref='dishes')

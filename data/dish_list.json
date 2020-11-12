@@ -1,0 +1,585 @@
+    [  {
+        "cuisine_id":1 ,
+        "id": 716268,
+        "title": "African Chicken Peanut Stew",
+        "image": "https://spoonacular.com/recipeImages/716268-312x231.jpg"
+    },
+    {
+        "cuisine_id":1 ,
+        "id": 632003,
+        "title": "African Bean Soup",
+        "image": "https://spoonacular.com/recipeImages/632003-312x231.jpg"
+    },
+    {
+        "cuisine_id":1 ,
+        "id": 716298,
+        "title": "How to Make Party Jollof Rice",
+        "image": "https://spoonacular.com/recipeImages/716298-312x231.jpg"
+    },
+    {
+        "cuisine_id":1 ,
+        "id": 653275,
+        "title": "North African Chickpea Soup",
+        "image": "https://spoonacular.com/recipeImages/653275-312x231.jpg"
+    },
+        
+    {   "cuisine_id":2,
+        "id": 656817,
+        "title": "Pork Schnitzel And Apple Salad",
+        "image": "https://spoonacular.com/recipeImages/656817-312x231.jpg"
+
+    },
+    { 
+        "cuisine_id":2,
+        "id": 1096208,
+        "title": "Spinach Goats Cheese Roulade Main Dish",
+        "image": "https://spoonacular.com/recipeImages/1096208-312x231.jpg"
+  
+    },
+    {
+        "cuisine_id":2,
+        "id": 649183,
+        "title": "Lamb and Fresh Goat Cheese Roulade",
+        "image": "https://spoonacular.com/recipeImages/649183-312x231.jpg"
+   
+    },
+    {
+        "cuisine_id":2,
+        "id": 644482,
+        "title": "German Meatloaf Falscher Hase",
+        "image": "https://spoonacular.com/recipeImages/644482-312x231.jpg"
+    
+    },
+    {
+        "cuisine_id":2,
+        "id": 638493,
+        "title": "Chicken/sweet Potato Roulade With Goat Cheese Sauce",
+        "image": "https://spoonacular.com/recipeImages/638493-312x231.jpg"
+     
+    },
+    {
+        "cuisine_id":2,
+        "id": 1095834,
+        "title": "German Braised Red Cabbage",
+        "image": "https://spoonacular.com/recipeImages/1095834-312x231.jpg"
+    
+    },
+    {
+        "cuisine_id":2,
+        "id": 656819,
+        "title": "Pork schnitzel with tarragon cream sauce",
+        "image": "https://spoonacular.com/recipeImages/656819-312x231.jpg"
+   
+    },
+    {
+        "cuisine_id":2,
+        "id": 1096205,
+        "title": "Zucchini Feta Roulade",
+        "image": "https://spoonacular.com/recipeImages/1096205-312x231.jpg"
+
+    },
+    {
+        "cuisine_id":2,
+        "id": 644504,
+        "title": "German White Chocolate Cake",
+        "image": "https://spoonacular.com/recipeImages/644504-312x231.jpg"
+  
+    },
+    {
+        "cuisine_id":2,
+        "id": 644488,
+        "title": "German Rhubarb Cake with Meringue",
+        "image": "https://spoonacular.com/recipeImages/644488-312x231.jpg"
+
+    },
+    {
+        "cuisine_id":3,
+        "id": 798400,
+        "title": "Spicy Black-Eyed Pea Curry with Swiss Chard and Roasted Eggplant",
+        "image": "https://spoonacular.com/recipeImages/798400-312x231.jpg"
+    },
+    {
+        "cuisine_id":3,
+        "id": 646043,
+        "title": "Gujarati Dry Mung Bean Curry",
+        "image": "https://spoonacular.com/recipeImages/646043-312x231.jpg"
+    },
+    {
+        "cuisine_id":3,
+        "id": 716364,
+        "title": "Rice and Peas with Coconut Curry Mackerel",
+        "image": "https://spoonacular.com/recipeImages/716364-312x231.jpg"
+    },
+    {
+        "cuisine_id":3,
+        "id": 660290,
+        "title": "Slow Cooker Lamb Curry",
+        "image": "https://spoonacular.com/recipeImages/660290-312x231.jpg"
+    },
+    {
+        "cuisine_id":3,
+        "id": 641122,
+        "title": "Curry Leaves Potato Chips",
+        "image": "https://spoonacular.com/recipeImages/641122-312x231.jpg"
+    },
+    {
+        "cuisine_id":3,
+        "id": 642468,
+        "title": "Ethiopian Lentil Curry",
+        "image": "https://spoonacular.com/recipeImages/642468-312x231.jpg"
+    },
+    {
+        "cuisine_id":3,
+        "id": 658482,
+        "title": "Roasted Acorn Squash Stuffed with spicy Biryani (Veg/vegan)",
+        "image": "https://spoonacular.com/recipeImages/658482-312x231.jpg"
+    },
+    {
+        "cuisine_id":3,
+        "id": 641128,
+        "title": "Curry Mussels",
+        "image": "https://spoonacular.com/recipeImages/641128-312x231.jpg"
+    },
+    {
+        "cuisine_id":3,
+        "id": 633088,
+        "title": "Authentic Jamaican Curry Chicken",
+        "image": "https://spoonacular.com/recipeImages/633088-312x231.jpg"
+    },
+    {
+        "cuisine_id":3,
+        "id": 641111,
+        "title": "Curry Beef Over Rice Noodles",
+        "image": "https://spoonacular.com/recipeImages/641111-312x231.jpg"
+    },
+
+    {
+        "cuisine_id":4,
+        "id": 766453,
+        "title": "Hummus and Za'atar",
+        "image": "https://spoonacular.com/recipeImages/766453-312x231.jpg"
+    },
+    {
+        "cuisine_id":4,
+        "id": 716195,
+        "title": "Spicy Indian-Style Hummus",
+        "image": "https://spoonacular.com/recipeImages/716195-312x231.jpg"
+    },
+    {
+        "cuisine_id":4,
+        "id": 649411,
+        "title": "Lebanese Tabouleh",
+        "image": "https://spoonacular.com/recipeImages/649411-312x231.jpg"
+    },
+    {
+        "cuisine_id":4,
+        "id": 642121,
+        "title": "Easy Tabouleh",
+        "image": "https://spoonacular.com/recipeImages/642121-312x231.jpg"
+    },
+    {
+        "cuisine_id":4,
+        "id": 649405,
+        "title": "Lebanese Lentil Soup",
+        "image": "https://spoonacular.com/recipeImages/649405-312x231.jpg"
+    },
+    {
+        "cuisine_id":4,
+        "id": 665378,
+        "title": "Winter Fattoush Salad",
+        "image": "https://spoonacular.com/recipeImages/665378-312x231.jpg"
+    },
+    {
+        "cuisine_id":4,
+        "id": 647638,
+        "title": "Hummus Wrap With Carrots and Cucumbers",
+        "image": "https://spoonacular.com/recipeImages/647638-312x231.jpg"
+    },
+    {
+        "cuisine_id":4,
+        "id": 647634,
+        "title": "Hummus with roasted orange peppers",
+        "image": "https://spoonacular.com/recipeImages/647634-312x231.jpg"
+    },
+    {
+        "cuisine_id":4,
+        "id": 651832,
+        "title": "Middle Eastern Stuffed Lentil Zatar Bread",
+        "image": "https://spoonacular.com/recipeImages/651832-312x231.jpg"
+    },
+    {
+        "cuisine_id":4,
+        "id": 658573,
+        "title": "Roasted Eggplant Hummus",
+        "image": "https://spoonacular.com/recipeImages/658573-312x231.jpg"
+    },
+
+    {
+        "cuisine_id":5,
+        "id": 715769,
+        "title": "Broccolini Quinoa Pilaf",
+        "image": "https://spoonacular.com/recipeImages/715769-312x231.jpg"
+    },
+    {
+        "cuisine_id":5,
+        "id": 715495,
+        "title": "Turkey Tomato Cheese Pizza",
+        "image": "https://spoonacular.com/recipeImages/715495-312x231.jpg"
+    },
+    {
+        "cuisine_id":5,
+        "id": 715573,
+        "title": "Simple Skillet Lasagna",
+        "image": "https://spoonacular.com/recipeImages/715573-312x231.jpg"
+    },
+    {
+        "cuisine_id":5,
+        "id": 659109,
+        "title": "Salmon Quinoa Risotto",
+        "image": "https://spoonacular.com/recipeImages/659109-312x231.jpg"
+    },
+    {
+        "cuisine_id":5,
+        "id": 648279,
+        "title": "Italian Tuna Pasta",
+        "image": "https://spoonacular.com/recipeImages/648279-312x231.jpg"
+    },
+    {
+        "cuisine_id":5,
+        "id": 648257,
+        "title": "Italian Steamed Artichokes",
+        "image": "https://spoonacular.com/recipeImages/648257-312x231.jpg"
+    },
+    {
+        "cuisine_id":5,
+        "id": 648247,
+        "title": "Italian Seafood Stew",
+        "image": "https://spoonacular.com/recipeImages/648247-312x231.jpg"
+    },
+    {
+        "cuisine_id":5,
+        "id": 640819,
+        "title": "Crispy Italian Cauliflower Poppers Appetizer",
+        "image": "https://spoonacular.com/recipeImages/640819-312x231.jpg"
+    },
+    {
+        "cuisine_id":5,
+        "id": 1095745,
+        "title": "Mushroom Hummus Crostini",
+        "image": "https://spoonacular.com/recipeImages/1095745-312x231.jpg"
+    },
+    {
+        "cuisine_id":5,
+        "id": 658753,
+        "title": "Roma Tomato Bruschetta",
+        "image": "https://spoonacular.com/recipeImages/658753-312x231.jpg"
+    },
+    {
+        "cuisine_id":6,
+        "id": 1095806,
+        "title": "Spanish style salmon fillets",
+        "image": "https://spoonacular.com/recipeImages/1095806-312x231.jpg"
+    },
+    {
+        "cuisine_id":6,
+        "id": 662294,
+        "title": "Sun-Dried Tomato Romesco",
+        "image": "https://spoonacular.com/recipeImages/662294-312x231.jpg"
+    },
+    {
+        "cuisine_id":6,
+        "id": 652134,
+        "title": "Mixed Paella",
+        "image": "https://spoonacular.com/recipeImages/652134-312x231.jpg"
+    },
+    {
+        "cuisine_id":6,
+        "id": 631747,
+        "title": "Dutch Oven Paella",
+        "image": "https://spoonacular.com/recipeImages/631747-312x231.jpg"
+    },
+    {
+        "cuisine_id":6,
+        "id": 1095841,
+        "title": "Spanish Gazpacho Soup",
+        "image": "https://spoonacular.com/recipeImages/1095841-312x231.jpg"
+    },
+    {
+        "cuisine_id":6,
+        "id": 654327,
+        "title": "Paella for Four; A Wonderful Spanish Mixed Seafood Stew",
+        "image": "https://spoonacular.com/recipeImages/654327-312x231.jpg"
+        
+    },
+    {   "cuisine_id":6,
+        "id": 641911,
+        "title": "Easy Chicken, Kielbasa and Shrimp Paella",
+        "image": "https://spoonacular.com/recipeImages/641911-312x231.jpg"
+    },
+    {
+        "cuisine_id":6,
+        "id": 660883,
+        "title": "Spanish “Ketchup” – Romesco Sauce",
+        "image": "https://spoonacular.com/recipeImages/660883-312x231.jpg"
+    },
+    {
+        "cuisine_id":6,
+        "id": 654331,
+        "title": "Paella Catalane With Mussels, Squid & Crevettes",
+        "image": "https://spoonacular.com/recipeImages/654331-312x231.jpg"
+    },
+    {
+        "cuisine_id":6,
+        "id": 660861,
+        "title": "Spanish Gazpacho Soup In The Raw With Broiled Cheese Toast",
+        "image": "https://spoonacular.com/recipeImages/660861-312x231.jpg"
+    },
+    {
+        "cuisine_id":7,
+        "id": 633754,
+        "title": "Baked Ratatouille",
+        "image": "https://spoonacular.com/recipeImages/633754-312x231.jpg"
+    },
+    {
+        "cuisine_id":7,
+        "id": 640693,
+        "title": "Creamy Ratatouille Over Penne",
+        "image": "https://spoonacular.com/recipeImages/640693-312x231.jpg"
+    },
+    {
+        "cuisine_id":7,
+        "id": 657933,
+        "title": "Ratatouille Pasta",
+        "image": "https://spoonacular.com/recipeImages/657933-312x231.jpg"
+    },
+    {
+        "cuisine_id":7,
+        "id": 662291,
+        "title": "Sun-Dried Tomato and Leek Quiche",
+        "image": "https://spoonacular.com/recipeImages/662291-312x231.jpg"
+    },
+    {
+        "cuisine_id":7,
+        "id": 658641,
+        "title": "Roasted Ratatouille Gratin",
+        "image": "https://spoonacular.com/recipeImages/658641-312x231.jpg"
+    },
+    {
+        "cuisine_id":7,
+        "id": 640869,
+        "title": "Crock Pot Shredded French Dip",
+        "image": "https://spoonacular.com/recipeImages/640869-312x231.jpg"
+    },
+    {
+        "cuisine_id":7,
+        "id": 647687,
+        "title": "Ratatouille",
+        "image": "https://spoonacular.com/recipeImages/647687-312x231.jpg"
+    },
+    {
+        "cuisine_id":7,
+        "id": 657939,
+        "title": "Ratatouille With Brie",
+        "image": "https://spoonacular.com/recipeImages/657939-312x231.jpg"
+    },
+    {
+        "cuisine_id":7,
+        "id": 639599,
+        "title": "Classic French Mussels",
+        "image": "https://spoonacular.com/recipeImages/639599-312x231.jpg"
+    },
+    {
+        "cuisine_id":7,
+        "id": 648641,
+        "title": "Julia Child's Ratatouille",
+        "image": "https://spoonacular.com/recipeImages/648641-312x231.jpg"
+    },
+    {
+        "cuisine_id":8,
+        "id": 652078,
+        "title": "Miso Soup With Thin Noodles",
+        "image": "https://spoonacular.com/recipeImages/652078-312x231.jpg"
+    },
+    {
+        "cuisine_id":8,
+        "id": 634710,
+        "title": "Beef Teriyaki Stir Fry",
+        "image": "https://spoonacular.com/recipeImages/634710-312x231.jpg"
+    },
+    {
+        "cuisine_id":8,
+        "id": 648506,
+        "title": "Japanese Sushi",
+        "image": "https://spoonacular.com/recipeImages/648506-312x231.jpg"
+    },
+    {
+        "cuisine_id":8,
+        "id": 1095955,
+        "title": "Instant Pot Pork Tenderloin Teriyaki",
+        "image": "https://spoonacular.com/recipeImages/1095955-312x231.jpg"
+    },
+    {
+        "cuisine_id":8,
+        "id": 648460,
+        "title": "Japanese Chicken Donburi",
+        "image": "https://spoonacular.com/recipeImages/648460-312x231.jpg"
+    },
+    {
+        "cuisine_id":8,
+        "id": 637908,
+        "title": "Chicken and Miso Ramen Noodle Soup",
+        "image": "https://spoonacular.com/recipeImages/637908-312x231.jpg"
+    },
+    {
+        "cuisine_id":8,
+        "id": 633841,
+        "title": "Baked Teriyaki Chicken Drumsticks",
+        "image": "https://spoonacular.com/recipeImages/633841-312x231.jpg"
+    },
+    {
+        "cuisine_id":8,
+        "id": 638382,
+        "title": "Chicken Teriyaki with Soba Noodles",
+        "image": "https://spoonacular.com/recipeImages/638382-312x231.jpg"
+    },
+    {
+        "cuisine_id":8,
+        "id": 648500,
+        "title": "Japanese Steak Salad",
+        "image": "https://spoonacular.com/recipeImages/648500-312x231.jpg"
+    },
+    {
+        "cuisine_id":8,
+        "id": 648470,
+        "title": "Japanese Curry Puffs",
+        "image": "https://spoonacular.com/recipeImages/648470-312x231.jpg"
+    },
+    
+    {
+        "cuisine_id":9,
+        "id": 639606,
+        "title": "Classic Greek Moussaka",
+        "image": "https://spoonacular.com/recipeImages/639606-312x231.jpg"
+    },
+    {
+        "cuisine_id":9,
+        "id": 664678,
+        "title": "Vegetarian Moussaka With Portabella",
+        "image": "https://spoonacular.com/recipeImages/664678-312x231.jpg"
+    },
+    {
+        "cuisine_id":9,
+        "id": 645646,
+        "title": "Grilled Chicken Gyros With Tzatziki",
+        "image": "https://spoonacular.com/recipeImages/645646-312x231.jpg"
+    },
+    {
+        "cuisine_id":9,
+        "id": 649225,
+        "title": "Lamb Moussaka",
+        "image": "https://spoonacular.com/recipeImages/649225-312x231.jpg"
+    },
+    {
+        "cuisine_id":9,
+        "id": 649354,
+        "title": "Layered Greek Salad",
+        "image": "https://spoonacular.com/recipeImages/649354-312x231.jpg"
+    },
+    {
+        "cuisine_id":9,
+        "id": 649195,
+        "title": "Lamb Burgers With Tzatziki Sauce",
+        "image": "https://spoonacular.com/recipeImages/649195-312x231.jpg"
+    },
+    {
+        "cuisine_id":9,
+        "id": 660843,
+        "title": "Spanakopita (Greek Spinach Pie)",
+        "image": "https://spoonacular.com/recipeImages/660843-312x231.jpg"
+    },
+    {
+        "cuisine_id":9,
+        "id": 656820,
+        "title": "Pork Shoulder Tacos with Chipotle Greek Yogurt and Coleslaw",
+        "image": "https://spoonacular.com/recipeImages/656820-312x231.jpg"
+    },
+    {
+        "cuisine_id":9,
+        "id": 1096161,
+        "title": "Greek Chicken Sheet Pan Dinner with Green Beans and Feta",
+        "image": "https://spoonacular.com/recipeImages/1096161-312x231.jpg"
+    },
+    {
+        "cuisine_id":9,
+        "id": 645348,
+        "title": "Greek Side Salad",
+        "image": "https://spoonacular.com/recipeImages/645348-312x231.jpg"
+    },
+    {
+        "cuisine_id":10,
+        "id": 795751,
+        "title": "Chicken Fajita Stuffed Bell Pepper",
+        "image": "https://spoonacular.com/recipeImages/795751-312x231.jpg"
+    },
+    {
+        "cuisine_id":10,
+        "id": 640062,
+        "title": "Corn Avocado Salsa",
+        "image": "https://spoonacular.com/recipeImages/640062-312x231.jpg"
+    },
+    {
+        "cuisine_id":10,
+        "id": 715421,
+        "title": "Cheesy Chicken Enchilada Quinoa Casserole",
+        "image": "https://spoonacular.com/recipeImages/715421-312x231.jpg"
+    },
+    {
+        "cuisine_id":10,
+        "id": 715543,
+        "title": "Homemade Guacamole",
+        "image": "https://spoonacular.com/recipeImages/715543-312x231.jpg"
+    },
+    {
+        "cuisine_id":10,
+        "id": 651977,
+        "title": "Mini Stuffed Mexican Bell Peppers",
+        "image": "https://spoonacular.com/recipeImages/651977-312x231.jpg"
+    },
+    {
+        "cuisine_id":10,
+        "id": 715533,
+        "title": "Filet Mignon Soft Tacos",
+        "image": "https://spoonacular.com/recipeImages/715533-312x231.jpg"
+    },
+    {
+        "cuisine_id":10,
+        "id": 975070,
+        "title": "Instant Pot Chicken Taco Soup",
+        "image": "https://spoonacular.com/recipeImages/975070-312x231.jpg"
+    },
+    {
+        "cuisine_id":10,
+        "id": 715391,
+        "title": "Slow Cooker Chicken Taco Soup",
+        "image": "https://spoonacular.com/recipeImages/715391-312x231.jpg"
+    },
+    {
+        "cuisine_id":10,
+        "id": 640117,
+        "title": "Corn-Crusted Fish Tacos With Jalapeno-Lime Sauce and Spicy Black Beans",
+        "image": "https://spoonacular.com/recipeImages/640117-312x231.jpg"
+    },
+    {
+        "cuisine_id":10,
+        "id": 645856,
+        "title": "Grilled Salmon With Cherry, Pineapple, Mango Salsa",
+        "image": "https://spoonacular.com/recipeImages/645856-312x231.jpg"
+    }
+
+]
+
+
+
+
+
+

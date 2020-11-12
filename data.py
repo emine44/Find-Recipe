@@ -14,6 +14,5 @@ for data in cuisine_list_in_db:
     endpoint = url + f"?apiKey={api_key}&cuisine={data.cuisine_country}"
     response=requests.get(endpoint)
     dish_list[data.cuisine_country]=response.json()["results"][0]
-    print("******************************************")
-    print(dish_list)
- 
+   
+

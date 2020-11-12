@@ -41,13 +41,14 @@ def get_user_by_email(email):
     return User.query.filter(User.email == email).first()
 
 
-def create_dish(title, overview, release_date, poster_path):
+def create_dish(cuisine_id,dish_id,name,image):
     """Create and return a new movie."""
 
-    dish = Dish(title=title,
-                  overview=overview,
-                  release_date=release_date,
-                  poster_path=poster_path)
+    dish = Dish(cuisine_id=cuisine_id,
+                dish_id=dish_id,
+                name=name,
+                image=image)
+                 
 
     db.session.add(dish)
     db.session.commit()
@@ -67,10 +68,10 @@ def get_cuisine_by_id(cuisine_id):
     return Cuisine.query.get(cuisine_id)
 
 
-def create_rating(user, dish, score):
+def create_rating(score, dish_id, user_id):
     """Create and return a new rating."""
 
-    rating = Rating(user=user, dish=dish, score=score)
+    rating = Rating(score=score, dish_id=dish_id,user_id=user_id)
 
     db.session.add(rating)
     db.session.commit()

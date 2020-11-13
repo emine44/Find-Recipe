@@ -55,8 +55,8 @@ with open('data/rating_list.json') as r:
 for rating in rating_data:
     score,dish_id,user_id = (rating['score'],rating['dish_id'],rating['user_id'])
 
-    db_rating=crud.create_rating(score,dish_id,user_id )
-    dish_list_db.append(db_rating)
+    db_rating=crud.create_rating(score,dish_id,user_id)
+    dish_list_db.append(db_dish)
 
 
 

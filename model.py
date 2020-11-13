@@ -19,7 +19,7 @@ class User(db.Model):
     password = db.Column(db.String)
 
     def __repr__(self):
-        return f'<User user_id= {self.user_id} email={self.email}>'
+        return f'<User user_id= {self.user_id} user_name={self.user_name} email={self.email} password={self.password}>'
 
 class Cuisine(db.Model):
     """A movie."""
@@ -48,7 +48,7 @@ class Dish(db.Model):
     rating= db.relationship('Rating', backref='dishes')
 
     def __repr__(self):
-        return f'<Dish dish_id={self.dish_id} name={self.name}>'  
+        return f'<Dish dish_id={self.dish_id} name={self.name} image={self.image}>'  
 
 class Rating(db.Model):
     """A movie rating."""

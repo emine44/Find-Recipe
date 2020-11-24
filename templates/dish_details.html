@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% block title %}Welcomes{% endblock %}
+ 
+{% block body %}
+<form class="form-inline my-2 my-lg-0">
+  <a href="/" class="btn btn-outline-success my-2 my-sm-0" role="button" >Logout</a> 
+ </form>
+  </nav>
+
+  <main role="main">
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+ <table>
+   <td>
+            <h4><div class="p-2 border"><b>{{summary["title"]}}</b></h4>
+              <div> <img src="{{dish.image}}" id='dish_img'> </div></td>
+    <td>    <section id="summary" style="align-items: center;">
+          {{ summary["summary"] | safe }}
+        </section> </td></table>
+        <p>Rating:</p>
+      <p> <form action="/dish_details" method="GET">
+        <div class="form-row align-items-center">
+          <div class="col-auto my-1">
+            <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+              <option selected>Rate Dish</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+          <div class="col-auto my-1">
+            <div class="custom-control custom-checkbox mr-sm-2">
+              <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+              <label class="custom-control-label" for="customControlAutosizing">Remember my preference</label>
+            </div>
+          </div>
+          <div class="col-auto my-1">
+            <button type="submit" class="btn btn-primary" id="rate_submit">Submit</button>
+          </div>
+        </div>
+      </form>
+      </p> 
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h4>Display ingredient list</h4>
+          <p><a class="ingredient" href="#" role="button">Ingredients &raquo;</a></p>
+          <p id="ingredient_place">{{ ingredients["ingredients"] | safe }}</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Display equipment list</h4>
+          <p><a class="equipment" href="#" role="button">Equipments &raquo;</a></p>
+          <p id="equipment_place">{{ equipments["equipment"] | safe }}</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Display instructions</h4>
+          <p><a class="instructions" href="#" role="button">Instructions &raquo;</a></p>
+          <p id="instructions_place">{{ instructions| safe }}</p>
+        </div>
+      </div>
+
+      <hr>
+
+    </div> <!-- /container -->
+
+  </main>
+
+ 
+
+
+
+{% endblock %}

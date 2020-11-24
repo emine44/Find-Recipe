@@ -93,6 +93,10 @@ def get_dish_by_cuisine_id(cuisine_id):
         dish_list.append(u)
     return dish_list
 
+def get_dish_by_id(dish_id):
+    dish=Dish.query.filter(Dish.dish_id==dish_id).all()
+    return dish
+
 
 # ########## RATING ############
 
@@ -106,27 +110,36 @@ def create_rating(score, dish_id, user_id):
 
     return rating
 
+def get_all_ratings():
+    rating=Rating.query.all()
+    return rating
 
-
+# count=SELECT count(Rating.score) FROM Where Rating.dish_id=''
+def get_average_rating(dish_id):
+    count=Rating.query(Rating.score.count()).filter(Rating.dish_id==dish_id)
+    return count
+# length=SELECT SUM(Rating.score) FROM Where Rating.dish_id=''
+def get_length_rating(dish_id):
+    length=Rating.query(sum(Rating.score)).filter(Rating.dish_id==dish_id)            
+    return length
 
 if __name__ == '__main__':
     from server import app
     connect_to_db(app)
     
 
-    # country_list=[]
-    # for i in range(10):
-    #     a=seed_database.cuisine_data[i]["cuisine_country"]
-    #     country_list.append(a)
-    # cuisine_list=[]
-    # for u in Cuisine.query.all():
-    #     cuisine_list.append(u.__dict__["cuisine_country"])
-
-    # # print(cuisine_list)
-    for a in get_dishes():
-        print(a.dish_id,a.name)
+    rating_list=[]
+    for rating in get_all_ratings():
+        rating_list.append(rating)
+    # print (rating_list)
     
+    total=0
+    count=0
+    for r in rating_list:
+        if r.dish_id==644488:
+           total=total + r.score
+           count=count+1
+    print (float(total/count))
+
 
     
-     
-

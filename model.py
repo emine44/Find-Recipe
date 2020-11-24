@@ -34,13 +34,14 @@ class Cuisine(db.Model):
         return f'<Cuisine cuisine_id={self.cuisine_id} cuisine_country={self.cuisine_country}>'  
 
 class Dish(db.Model):
-    """A movie."""
+    """A Dish."""
 
     __tablename__ = 'dishes'
     cuisine_id = db.Column(db.Integer,db.ForeignKey('cuisines.cuisine_id'), nullable=False)
     dish_id = db.Column(db.Integer,  primary_key=True)
     name = db.Column(db.String)
     image=db.Column(db.String)
+   
 
     # rating_id=db.Column(db.Integer,db.ForeignKey('ratings.rating_id'),nullable=False)
     
@@ -51,7 +52,7 @@ class Dish(db.Model):
         return f'<Dish dish_id={self.dish_id} name={self.name} image={self.image}>'  
 
 class Rating(db.Model):
-    """A movie rating."""
+    """A dish rating."""
 
     __tablename__ = 'ratings'
 
@@ -64,7 +65,7 @@ class Rating(db.Model):
     dish=db.relationship('Dish',backref='ratings')
 
     def __repr__(self):
-        return f'<Rating rating_id={self.rating_id} score={self.score}>'  
+        return f'<Rating rating_id={self.rating_id} score={self.score} dish_id={self.dish_id} user_id={self.user_id}>'  
 
 def connect_to_db(flask_app, db_uri='postgresql:///recipes', echo=True):
     flask_app.config['SQLALCHEMY_DATABASE_URI'] = db_uri

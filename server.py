@@ -22,38 +22,16 @@ def display_homepage():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
 
-    cuisine_list = crud.get_all_cuisines()
-    dish_list = crud.get_dishes()
-    ratings = crud.get_all_ratings()
-
-
-    
-    
-    # total = sum(r.score for r in ratings_list)
-    # avg_rating = float(total / len(ratings_list))
-
-   
-
-
-
-
     email = request.form.get("email")
     password = request.form.get("password")
 
-    user= User.query.filter_by(email = request.form["email"]).one()
-    
-
-
-
-
     if crud.validate_user_login(email, password) == 'valid':
-        # session['current_user'] = email
-        # flash(f'Logged in as {email}')
-        flash("success!!!")
+        session['current_user'] = email
+        flash(f'Logged in as {email}')
         print("*****************************************")
         print("success!!!")
         print("*****************************************")
-        return render_template('cuisine_list.html', items=cuisine_list, user=user, dish_list=dish_list,ratings=ratings)
+        return redirect("/cuisine_list")
     else:
         flash("invalid!!!")
         print("*****************************************")
@@ -64,7 +42,15 @@ def login():
 
 @app.route('/cuisine_list',  methods=['GET', 'POST'])
 def all_cuisines():
-    return render_template('cuisine_list.html')
+
+    user= User.query.filter_by(email = session["current_user"]).one()
+    
+    cuisine_list = crud.get_all_cuisines()
+    dish_list = crud.get_dishes()
+    ratings = crud.get_all_ratings()
+
+    return render_template('cuisine_list.html', items=cuisine_list, user=user, dish_list=dish_list,ratings=ratings)
+
 
 
 @app.route('/sign_up', methods=['GET', 'POST'])
@@ -81,36 +67,45 @@ def register_user():
     
     
 
-    user= crud.create_user(user_name=username, email=email, password=password)
-
-    session['user_id']=user.user_id
+    crud.create_user(user_name=username, email=email, password=password)
+    
+    
     print('*'*20)
     print('/n')
     print(username)
     print('*'*20)
 
-    session['score']=request.args.get('score')
     return render_template("homepage.html")
 
 
 @app.route('/dish_details', methods=['GET', 'POST'])
 def get_dish_details():
     """Show individual dish's info."""
+    if request.method=='POST': 
+        dish_id = request.form.get("dish_id")
+    else:
+        dish_id = request.args.get("dish_id")
 
-    dish_id = request.args.get("dish_id")
+    score =request.form.get("rate")
+
+    user_id=session["user_id"]
+
     dish= Dish.query.get(dish_id)
     summary = get_dish_summary(dish_id)
+   
     ingredients=get_ingredients(dish_id)
     equipments=get_equipments(dish_id)
     instructions=get_instructions(dish_id)
     
-    # crud.create_rating(score,dish_id,session['user_id'])
-        
+    # crud.create_rating(score=score,dish_id=dish_id,user_id=user_id)
+     
 
 
     print(dish_id)
     print('*'*20)
-    
+
+    print(score)
+    print('*'*20)
     
     print('*'*20)
 

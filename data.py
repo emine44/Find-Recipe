@@ -68,3 +68,6 @@ def get_joke():
     joke_data = res.json()
 
     return joke_data
+
+
+# print(get_dish_summary(632003))

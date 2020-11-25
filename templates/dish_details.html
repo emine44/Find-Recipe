@@ -2,15 +2,15 @@
 {% block title %}Welcomes{% endblock %}
  
 {% block body %}
-<form class="form-inline my-2 my-lg-0">
+<form class="form-inline my-2 my-lg-0" style="font-family: Haettenschweiler;">
   <a href="/" class="btn btn-outline-success my-2 my-sm-0" role="button" >Logout</a> 
  </form>
   </nav>
 
   <main role="main">
-
+<div class="container">
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
+    <div class="jumbotron" style="font-family: Haettenschweiler; background-color:rgba(255, 255, 255, 0.822); border: black;">
       <div class="container">
  <table>
    <td>
@@ -20,11 +20,15 @@
           {{ summary["summary"] | safe }}
         </section> </td></table>
         <p>Rating:</p>
-      <p> <form action="/dish_details" method="GET">
+      
+      <p> 
+    <form action="/dish_details" method="POST">
+      <input type="hidden" name="dish_id" value="{{summary['id']}}">
+
         <div class="form-row align-items-center">
           <div class="col-auto my-1">
             <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
-            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+            <select class="custom-select mr-sm-2" name="rate">
               <option selected>Rate Dish</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -47,33 +51,38 @@
       </p> 
       </div>
     </div>
+  </div>
 
+  <div class="container">
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron" style="font-family: Haettenschweiler; background-color:rgba(255, 255, 255, 0.822); border: black;">
     <div class="container">
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-4">
-          <h4>Display ingredient list</h4>
-          <p><a class="ingredient" href="#" role="button">Ingredients &raquo;</a></p>
-          <p id="ingredient_place">{{ ingredients["ingredients"] | safe }}</p>
+          <h2>Ingredients</h2>
+          <p>{%for i in  ingredients["ingredients"]%} {{"".join(i["name"]).capitalize()}},   {%endfor%}  </p>
+        
+        
         </div>
-        <div class="col-md-4">
-          <h4>Display equipment list</h4>
-          <p><a class="equipment" href="#" role="button">Equipments &raquo;</a></p>
-          <p id="equipment_place">{{ equipments["equipment"] | safe }}</p>
+        <div class="col-md-5">
+          <h2>Instructions</h2>
+          <p>{%for inst in instructions[0]["steps"]%}
+            {{"".join(inst["step"])}}, {%endfor%}</p>
         </div>
-        <div class="col-md-4">
-          <h4>Display instructions</h4>
-          <p><a class="instructions" href="#" role="button">Instructions &raquo;</a></p>
-          <p id="instructions_place">{{ instructions| safe }}</p>
+        <div class="col-md-3">
+          <h2>Equipments</h2>
+          <p>{%for i in  equipments["equipment"]%}{{"".join(i["name"]) .capitalize()}} ,{%endfor%}</p>
         </div>
       </div>
-
-      <hr>
-
-    </div> <!-- /container -->
-
+    </div>
+    </br>
+  </br>
+</div>
+  </div>
+  
   </main>
-
+ 
  
 
 

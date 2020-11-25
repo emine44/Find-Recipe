@@ -5,7 +5,6 @@ from flask_sqlalchemy import SQLAlchemy
 db = SQLAlchemy()
 
 
-# Replace this with your code!
 class User(db.Model):
     """A user."""
 
@@ -57,7 +56,7 @@ class Rating(db.Model):
     __tablename__ = 'ratings'
 
     rating_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    score = db.Column(db.Integer)
+    score = db.Column(db.Integer,nullable=False)
     dish_id = db.Column(db.Integer, db.ForeignKey('dishes.dish_id'),nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'), nullable=False)
 

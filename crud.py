@@ -128,18 +128,18 @@ if __name__ == '__main__':
     connect_to_db(app)
     
 
-    rating_list=[]
-    for rating in get_all_ratings():
-        rating_list.append(rating)
-    # print (rating_list)
+    # rating_list=[]
+    # for rating in get_all_ratings():
+    #     rating_list.append(rating)
+    # # print (rating_list)
     
-    total=0
-    count=0
-    for r in rating_list:
-        if r.dish_id==644488:
-           total=total + r.score
-           count=count+1
-    print (float(total/count))
-
+    # total=0
+    # count=0
+    # for r in rating_list:
+    #     if r.dish_id==644488:
+    #        total=total + r.score
+    #        count=count+1
+    # print (float(total/count))
+   
 
     

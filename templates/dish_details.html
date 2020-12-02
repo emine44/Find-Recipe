@@ -19,7 +19,7 @@
     <td>    <section id="summary" style="align-items: center;">
           {{ summary["summary"] | safe }}
         </section> </td></table>
-        <p>Rating:</p>
+        
       
       <p> 
     <form action="/dish_details" method="POST">
@@ -44,13 +44,17 @@
             </div>
           </div>
           <div class="col-auto my-1">
-            <button type="submit" class="btn btn-primary" id="rate_submit">Submit</button>
+            <button type="submit" class="btn btn-primary" name="rated"id="rate_submit">Submit</button>
           </div>
+         
         </div>
       </form>
       </p> 
+      <div><p>You rated:{{rate}}</div>  
+        <h4><a href="/cuisine_list">--Click for cuisine list</a></h4>   
       </div>
     </div>
+    
   </div>
 
   <div class="container">

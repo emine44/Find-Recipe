@@ -34,16 +34,17 @@
             {%for dish in dish_list%}
             {%if dish.cuisine_id==item.cuisine_id%}
 
-              {%for rating in dish.ratings%}
+       
                  
                     
                
             <a href="/dish_details?dish_id={{ dish.dish_id }}">
               <div class="p-2 border" id="{{dish.dish_id}}"><b>{{dish.name}}</b>
-                <div> <img src="{{dish.image}}" id='dish_img'> </div>Rating:  <b name="score"> {{ (dish.ratings|sum(attribute='score')) / dish.rating |length() }}</b>
+                <div> <img src="{{dish.image}}" id='dish_img'> </div>
+                Rating:  <b name="score"> {{ (((dish.ratings|sum(attribute='score'))) / (dish.rating |length())) |float }}</b> 
               </div>
             </a>
-            {%endfor%}
+           
             {%endif%} 
             {%endfor%}
           </div>

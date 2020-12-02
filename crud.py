@@ -33,12 +33,16 @@ def get_user_by_email(email):
     return User.query.filter(User.email == email).all()
 
 def validate_user_login(email,password):
-    user=User.query.filter(User.email==email and User.password==password).first()
+    user=User.query.filter(User.email==email and User.password==password).all()
     if user!=None:
         return "valid"
     else:
         return "invalid"
-
+    if user[email]==email and user[password]==password:
+       return "valid"
+    else:
+        return "invalid"  
+    
 # ########## CUISINE ############
 
 def create_cuisine(cuisine_country):
@@ -141,5 +145,5 @@ if __name__ == '__main__':
     #        count=count+1
     # print (float(total/count))
    
-
+    print(validate_user_login("test1@recipe.com","password"))
     

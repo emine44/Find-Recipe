@@ -81,14 +81,17 @@ def register_user():
 @app.route('/dish_details', methods=['GET', 'POST'])
 def get_dish_details():
     """Show individual dish's info."""
+    user_id=session["user_id"]
+    score =request.form.get("rate")
     if request.method=='POST': 
         dish_id = request.form.get("dish_id")
     else:
         dish_id = request.args.get("dish_id")
-
-    score =request.form.get("rate")
-
-    user_id=session["user_id"]
+    if score!=None: 
+        crud.create_rating(score=score,dish_id=dish_id,user_id=user_id)
+        flash("you rated!!!")
+   
+    
 
     dish= Dish.query.get(dish_id)
     summary = get_dish_summary(dish_id)
@@ -97,8 +100,8 @@ def get_dish_details():
     equipments=get_equipments(dish_id)
     instructions=get_instructions(dish_id)
     
-    # crud.create_rating(score=score,dish_id=dish_id,user_id=user_id)
-     
+   
+    
 
 
     print(dish_id)
@@ -109,7 +112,7 @@ def get_dish_details():
     
     print('*'*20)
 
-    return render_template('dish_details.html', summary=summary,ingredients=ingredients,equipments=equipments,instructions=instructions,dish=dish)
+    return render_template('dish_details.html', summary=summary,ingredients=ingredients,equipments=equipments,instructions=instructions,dish=dish,rate=score)
 
 
 # @app.route('/user_profile')

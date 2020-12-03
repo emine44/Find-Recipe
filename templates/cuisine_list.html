@@ -2,24 +2,24 @@
 {% block title %}Welcomes{% endblock %}
  
 {% block body %}
-<form class="form-inline my-2 my-lg-0">
-  <a href="/" class="btn btn-outline-success my-2 my-sm-0" role="button" >Logout</a> 
+<form class="form-inline my my-lg-12">
+  <a href="/" class="btn btn-outline-success my-4 my-sm-0" role="button" >Logout</a> 
  </form>
   </nav>
   
  </br></br></br></br>
  
-<div class="container-6">
+<div class="container">
   <div class="accordion" id="accordionExample" style="background-color:rgba(255, 255, 255,0.80); border: black;">
     
     <h1>Welcome {{user.user_name}}</h1>
   
     {% for item in items %}
 
-    <div class="card" style="background-color:rgba(255, 255, 255, 0.50);">
+    <div class="card" style="background-color:rgba(255, 255, 255, 0.50); font-size:25px;">
       <div class="card-header" id="heading{{item.cuisine_country}}">
         <h1 class="mb-2" style="border-width: 5px;border-style:ridge;">
-          <button  class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+          <button style="background-color:rgba(255, 255, 255, 0.50); font-size:25px;" class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
             data-target="#collapseThree{{item.cuisine_country}}" aria-expanded="false"
             aria-controls="collapseThree{{item.cuisine_country}}" >
             {{item.cuisine_country}}

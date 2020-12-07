@@ -3,22 +3,26 @@
 Find Me Recipe is a provide users lots of recipes all around the world.
 Lines of code Repo size
 
+## Prerequisites
+Python and Pip3
+PostgresQL database 
+Spoonacular API key
+
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
-
 ```bash
-pip install foobar
+pip3 -m env
+source env/bin/activate
+pip3 install -r requirements.txt
 ```
-
+Database:
+```bash
+psql recipes
+```
 ## Usage
 
-```python
-import foobar
+```python3 server.py
 
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
 ```
 
 ## Contributing

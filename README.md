@@ -1,6 +1,7 @@
-# Foobar
+# Find Me Recipe
 
-Foobar is a Python library for dealing with word pluralization.
+Find Me Recipe is a provide users lots of recipes all around the world.
+Lines of code Repo size
 
 ## Installation
 

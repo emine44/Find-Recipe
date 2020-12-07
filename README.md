@@ -2,6 +2,11 @@
 
 Find Me Recipe is a provide users lots of recipes all around the world.
 Lines of code Repo size
+## Features
+Displaying cuisine list with rating scores and can 
+Displaying the chosen dish by user
+Rating the selected dish
+
 
 ## Prerequisites
 Python and Pip3
@@ -21,8 +26,8 @@ psql recipes
 ```
 ## Usage
 
-```python3 server.py
-
+```bash
+python3 server.py
 ```
 
 ## Contributing
@@ -30,5 +35,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Please make sure to update tests as appropriate.
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
+
